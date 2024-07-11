@@ -23,8 +23,9 @@ public class DvdDao {
 		try {
 			con = pool.getConnection();
 			StringBuilder sql = new StringBuilder();
-			sql.append("select * from dvd view");
-			sql.append("where title like ? limit 0, 50");
+			sql.append("select * from dvd_view ");
+			sql.append("where title like ? ");
+			sql.append(" limit 0, 50");
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1, "%" + searchText + "%");
 			rs = pstmt.executeQuery();
