@@ -88,7 +88,6 @@ function handleSubmitAllClick(){
 	.then(response => {
 		response.text()
 		.then(data => {
-			
 			const body = document.querySelector("body");
 			body.innerHTML += `<h1>${data}</h1>`;
 			console.log(data);
